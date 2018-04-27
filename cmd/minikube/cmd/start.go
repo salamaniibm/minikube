@@ -319,9 +319,9 @@ func runStart(cmd *cobra.Command, args []string) {
 
 	if config.VMDriver == "none" {
 		if viper.GetBool(cfg.WantNoneDriverWarning) {
-			fmt.Println(`===================
+			fmt.Print(`===================
 WARNING: IT IS RECOMMENDED NOT TO RUN THE NONE DRIVER ON PERSONAL WORKSTATIONS
-	The 'none' driver will run an insecure kubernetes apiserver as root that may leave the host vulnerable to CSRF attacks
+	The 'none' driver will run an insecure kubernetes apiserver as root that may leave the host vulnerable to CSRF attacks \n
 `)
 		}
 
